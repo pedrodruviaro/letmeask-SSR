@@ -1,0 +1,46 @@
+@use "./variables";
+
+.modal-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &.open {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.modal {
+    background-color: variables.$light;
+    padding: 2rem;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    > form {
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
