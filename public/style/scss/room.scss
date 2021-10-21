@@ -1,3 +1,161 @@
-.room {
-    color: red;
+@use "./variables";
+
+.room-header {
+    background-color: variables.$light;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+        border: 1px solid;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: 4px;
+        overflow: hidden;
+
+        > button {
+            padding: 0.5rem;
+            height: auto;
+            border-radius: 0;
+        }
+
+        > span {
+            padding: 0.25rem;
+            margin-left: 0.25rem;
+            font-weight: 500;
+
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.room-main {
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    > h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+.room-form {
+    background-color: variables.$light;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+
+    > textarea {
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        padding: 1rem;
+        resize: none;
+        height: 120px;
+        width: 100%;
+    }
+
+    > footer {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+        > div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: variables.$gray;
+            font-size: 0.9rem;
+        }
+
+        > button {
+            padding: 0.25rem 0.75rem;
+            margin-right: 0;
+        }
+    }
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.question {
+    padding: 1rem;
+    background-color: variables.$light;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 4px;
+
+    > header {
+        display: flex;
+        align-items: center;
+
+        p {
+            text-align: left;
+            margin-left: 1rem;
+        }
+
+        div {
+            background-color: variables.$accent;
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            i {
+                color: variables.$light;
+            }
+        }
+    }
+
+    > footer {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+
+        button {
+            color: variables.$gray;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            background-color: transparent;
+            cursor: pointer;
+
+            i {
+                color: variables.$red;
+            }
+
+            &:first-child {
+                > i {
+                    color: variables.$green;
+                }
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // question read
+    &.read {
+        background-color: rgba(128, 128, 128, 0.322);
+
+        > header {
+            > div {
+                background-color: gray;
+            }
+        }
+    }
 }

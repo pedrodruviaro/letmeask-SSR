@@ -1,0 +1,67 @@
+@use "variables";
+
+body {
+    background-color: #f5f5f5;
+    color: variables.$dark;
+}
+
+p {
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+.btn {
+    background-color: variables.$accent;
+    color: variables.$light;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0 auto;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    transition: filter 0.2s ease;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
+
+.input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}

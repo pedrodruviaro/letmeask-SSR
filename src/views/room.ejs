@@ -1,7 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./parts/head.ejs')  %> 
+<%- include('./parts/head.ejs')  %>
 <body>
-    home
+    <main class="room-main">
+        <h2>Sala de React</h2>
+        <form action="" class="room-form">
+            <textarea autofocus name="question" placeholder="Type a new question" ></textarea>
+            <footer>
+                <div>
+                    <i class="fas fa-lock"></i>
+                    <span>This question is anonymous</span>
+                </div>
+                <button type="submit" class="btn">Submit <i class="fas fa-paper-plane"></i></button>
+            </footer>
+        </form>
+
+        <section class="questions">
+            <article class="question">
+                <header>
+                    <div>
+                        <i class="fas fa-user"></i>  
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas reiciendis vel quidem quis, provident nam magni voluptates qui voluptate porro.</p>
+                </header>
+                <footer>
+                    <button>
+                        <i class="fas fa-check-double"></i>
+                        Mark as read
+                    </button>
+                    <button>
+                        <i class="fas fa-trash"></i>
+                        Delete question
+                    </button>
+                </footer>
+            </article>
+
+            <article class="question read">
+                <header>
+                    <div>
+                        <i class="fas fa-user"></i>  
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas reiciendis vel quidem quis, provident nam magni voluptates qui voluptate porro.</p>
+                </header>
+                <footer>
+                    <button>
+                        <i class="fas fa-check-double"></i>
+                        Mark as read
+                    </button>
+                    <button>
+                        <i class="fas fa-trash"></i>
+                        Delete question
+                    </button>
+                </footer>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
