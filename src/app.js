@@ -13,6 +13,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
-app.use("/", (req, res) => res.render("home"));
+app.use("/", (req, res) => res.render("home", { title: "Home" }));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
