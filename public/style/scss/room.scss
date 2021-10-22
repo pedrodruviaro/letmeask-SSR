@@ -40,6 +40,13 @@
     flex-direction: column;
     text-align: center;
 
+    > div {
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+    }
+
     > h2 {
         margin-bottom: 2rem;
     }
@@ -121,29 +128,41 @@
         padding-top: 1rem;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
+        flex-wrap: wrap;
         gap: 1rem;
 
-        button {
+        span {
             color: variables.$gray;
-            outline: none;
-            border: none;
-            font-size: 1rem;
-            background-color: transparent;
-            cursor: pointer;
+            font-size: 0.8rem;
+        }
 
-            i {
-                color: variables.$red;
-            }
+        > div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
 
-            &:first-child {
-                > i {
-                    color: variables.$green;
+            button {
+                color: variables.$gray;
+                outline: none;
+                border: none;
+                font-size: 1rem;
+                background-color: transparent;
+                cursor: pointer;
+
+                i {
+                    color: variables.$red;
                 }
-            }
 
-            &:hover {
-                text-decoration: underline;
+                &:first-child {
+                    > i {
+                        color: variables.$green;
+                    }
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "node-dev src/app.js",
-    "initDb": "node src/database/init.js"
+    "initDb": "node src/database/init.js",
+    "sass": "sass --style compressed --watch public/style/scss/combined.scss:public/style/css/global.css"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

@@ -53,10 +53,10 @@ class Room {
         if (!room) return res.redirect("/");
 
         const questions = await db.all(
-            `SELECT * FROM questions WHERE roomId = ${roomId} AND read = 0`
+            `SELECT * FROM questions WHERE roomId = ${roomId} AND read = 0 ORDER BY id DESC`
         );
         const readedQuestions = await db.all(
-            `SELECT * FROM questions WHERE roomId = ${roomId} AND read = 1`
+            `SELECT * FROM questions WHERE roomId = ${roomId} AND read = 1 ORDER BY id DESC`
         );
 
         await db.close();

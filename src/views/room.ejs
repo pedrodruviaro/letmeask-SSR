@@ -12,11 +12,16 @@
         </div>
     </header>
     <main class="room-main">
-        <h2>
-            <%= room.title %> 
-        </h2>
-        <form action="" class="room-form">
-            <textarea autofocus name="question" placeholder="Type a new question" ></textarea>
+        <div>
+            <h2>
+                <%= room.title %> 
+            </h2>
+            <span>
+                <%= room.createdAt %> 
+            </span>
+        </div>
+        <form action="/question/new/<%= room.id %> " method="POST" class="room-form">
+            <textarea required autofocus name="question" placeholder="Type a new question" ></textarea>
             <footer>
                 <div>
                     <i class="fas fa-lock"></i>
@@ -39,14 +44,19 @@
                         </p>
                     </header>
                     <footer>
-                        <button>
-                            <i class="fas fa-check-double"></i>
-                            Mark as read
-                        </button>
-                        <button>
-                            <i class="fas fa-trash"></i>
-                            Delete question
-                        </button>
+                        <span>
+                            <%= question.createdAt %> 
+                        </span>
+                        <div>
+                            <button>
+                                <i class="fas fa-check-double"></i>
+                                Mark as read
+                            </button>
+                            <button>
+                                <i class="fas fa-trash"></i>
+                                Delete question
+                            </button>
+                        </div>
                     </footer>
             </article>
 
@@ -64,14 +74,20 @@
                         </p>
                     </header>
                     <footer>
-                        <button>
-                            <i class="fas fa-check-double"></i>
-                            Mark as read
-                        </button>
-                        <button>
-                            <i class="fas fa-trash"></i>
-                            Delete question
-                        </button>
+                        <span>
+                            <%= question.createdAt %> 
+                        </span>
+                        <div>
+
+                            <button>
+                                <i class="fas fa-check-double"></i>
+                                Mark as read
+                            </button>
+                            <button>
+                                <i class="fas fa-trash"></i>
+                                Delete question
+                            </button>
+                        </div>
                     </footer>
             </article>
 
