@@ -31,6 +31,12 @@
             </footer>
         </form>
 
+        <% if(questions.length === 0){ %>
+
+            <%- include('./parts/no-questions.ejs')  %> 
+
+        <% } %> 
+
         <section class="questions">
             <% questions.forEach(question => { %>
 

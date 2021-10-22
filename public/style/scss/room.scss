@@ -178,3 +178,17 @@
         }
     }
 }
+
+.no-questions {
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    > h3 {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    > div {
+        max-width: 400px;
+    }
+}
