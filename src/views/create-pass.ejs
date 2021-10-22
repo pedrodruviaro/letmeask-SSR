@@ -5,9 +5,9 @@
     <main class="create-pass">
         <div>
             <h1>Create your custom room</h1>
-            <form action="" class="form">
-                <input type="texto" class="input" placeholder="Room Title">
-                <input type="password" class="input" placeholder="Password">
+            <form action="/create-room" method="POST" class="form">
+                <input type="texto" class="input" placeholder="Room Title" name="title">
+                <input type="password" class="input" placeholder="Password" name="password">
                 <button type="submit" class="btn">Create Room</button>
             </form>
         </div>
