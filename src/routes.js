@@ -18,6 +18,8 @@ router.post("/create-room", Room.create);
 // QUESTION ROUTES
 router.post("/question/new/:roomId", Question.create);
 
-// router.post('/question/action/:action')
+router.post("/question/:roomId/:questionId/:action", (req, res) => {
+    res.send("hello");
+});
 
 module.exports = router;

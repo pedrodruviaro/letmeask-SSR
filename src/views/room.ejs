@@ -8,7 +8,7 @@
             <button class="btn">
                 <i class="fas fa-copy"></i>
             </button>
-            <span># <%= room.id %> </span>
+            <span id="room-id" data-roomid="<%=room.id%>"># <%= room.id %> </span>
         </div>
     </header>
     <main class="room-main">
@@ -54,11 +54,11 @@
                             <%= question.createdAt %> 
                         </span>
                         <div>
-                            <button>
+                            <button class="read" data-id="<%= question.id %>">
                                 <i class="fas fa-check-double"></i>
                                 Mark as read
                             </button>
-                            <button>
+                            <button class="delete" data-id="<%= question.id %>">
                                 <i class="fas fa-trash"></i>
                                 Delete question
                             </button>
@@ -85,11 +85,11 @@
                         </span>
                         <div>
 
-                            <button>
+                            <button class="read" data-id="<%= question.id %>">
                                 <i class="fas fa-check-double"></i>
                                 Mark as read
                             </button>
-                            <button>
+                            <button class="delete" data-id="<%= question.id %>">
                                 <i class="fas fa-trash"></i>
                                 Delete question
                             </button>
@@ -106,11 +106,11 @@
         <div class="modal">
             <h2>Lorem, ipsum dolor.</h2>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
-            <form action="" class="form"> 
-                <input type="password" name="password" class="input">
+            <form method="POST" class="form"> 
+                <input type="password" placeholder="Room Password" name="password" class="input">
                 <div>
-                    <button type="submit" class="btn">Cancel</button>
-                    <button type="submit" class="btn">Confirm</button>
+                    <button type="button" class="btn cancel">Cancel</button>
+                    <button type="submit" class="btn btn-modal">Confirm</button>
                 </div>
             </form>
         </div>

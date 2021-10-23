@@ -1,9 +1,13 @@
 const modalWrapper = document.querySelector(".modal-wrapper");
 
-function open() {
+const cancelButton = document.querySelector(".btn.cancel");
+
+cancelButton.addEventListener("click", close);
+
+export function open() {
     modalWrapper.classList.add("open");
 }
 
-function close() {
+export function close() {
     modalWrapper.classList.remove("open");
 }
