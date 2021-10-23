@@ -3,25 +3,32 @@
 <%- include('./parts/head.ejs')  %>
 <body>
     <main class="home">
-        <div class="home-container">
+        <div class="banner-container">
             <div>
-                <h1>Live interations</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laborum!</p>
+                <h1>Welcome</h1>
+                <span>nice to see you</span>
             </div>
+            <img src="/assets/banner.svg" alt="">
+        </div>
+        <div class="info-container">
+            <header>
+                <i class="fas fa-users"></i>
+                <h1>Live interations</h1>
+            </header>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laborum!</p>
             <div>
                 <h2>Create a new room</h2>
                 <a href="/create-room" class="btn">Create</a>
             </div>
             <p class="divisor">or</p>
-            <h2>Join a room</h2>
-            <form action="" class="form">
-                <input type="text" placeholder="Room Code" name="room-code" class="input">
-                <button class="btn" type="submit">Enter</button>
-            </form>
+            <div>
+                <h2>Join a room</h2>
+                <form action="" class="form">
+                    <input type="text" placeholder="Room Code" name="room-code" class="input">
+                    <button class="btn" type="submit">Enter</button>
+                </form>
+            </div>
         </div>
-
-        <div class="ball one"></div>
-        <div class="ball two"></div>
     </main>
 </body>
 </html>
