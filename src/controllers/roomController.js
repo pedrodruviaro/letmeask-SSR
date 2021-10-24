@@ -9,7 +9,7 @@ class Room {
 
         try {
             // hasing password
-            const salt = await bcrypt.genSalt();
+            const salt = await bcrypt.genSalt(5);
             const hashedPassword = await bcrypt.hash(password, salt);
 
             const db = await Database();

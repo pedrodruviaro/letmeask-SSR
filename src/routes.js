@@ -15,11 +15,11 @@ router.get("/create-room", (req, res) => {
 
 router.post("/create-room", Room.create);
 
+router.get("/", (req, res) => {});
+
 // QUESTION ROUTES
 router.post("/question/new/:roomId", Question.create);
 
-router.post("/question/:roomId/:questionId/:action", (req, res) => {
-    res.send("hello");
-});
+router.post("/question/:roomId/:questionId/:action", Question.action);
 
 module.exports = router;

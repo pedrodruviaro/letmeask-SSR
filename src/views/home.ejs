@@ -23,12 +23,14 @@
             <span class="divisor">or</span>
             <div>
                 <h2>Join a room</h2>
-                <form action="" class="form">
-                    <input type="text" placeholder="Room Code" name="room-code" class="input">
+                <form method="GET" class="form" id="form-enter-room">
+                    <input type="text" required placeholder="Room Code" id="input-room-code" name="roomId" class="input">
                     <button class="btn pink" type="submit">Enter</button>
                 </form>
             </div>
         </div>
     </main>
+
+    <script src="/js/joinRoom.js"></script>
 </body>
 </html>

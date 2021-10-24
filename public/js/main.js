@@ -1,3 +1,7 @@
+/*----------------*/
+/*MODAL*/
+/*----------------*/
+
 import { open } from "./modal.js";
 
 // action buttons

@@ -31,7 +31,7 @@
             </footer>
         </form>
 
-        <% if(questions.length === 0){ %>
+        <% if(questions.length === 0 && readedQuestions.length === 0){ %>
 
             <%- include('./parts/no-questions.ejs')  %> 
 
@@ -83,17 +83,6 @@
                         <span>
                             <%= question.createdAt %> 
                         </span>
-                        <div>
-
-                            <button class="read" data-id="<%= question.id %>">
-                                <i class="fas fa-check-double"></i>
-                                Mark as read
-                            </button>
-                            <button class="delete" data-id="<%= question.id %>">
-                                <i class="fas fa-trash"></i>
-                                Delete question
-                            </button>
-                        </div>
                     </footer>
             </article>
 
@@ -107,7 +96,7 @@
             <h2>Lorem, ipsum dolor.</h2>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
             <form method="POST" class="form"> 
-                <input type="password" placeholder="Room Password" name="password" class="input">
+                <input type="password" required placeholder="Room Password" name="password" class="input">
                 <div>
                     <button type="button" class="btn cancel">Cancel</button>
                     <button type="submit" class="btn btn-modal">Confirm</button>
@@ -115,5 +104,8 @@
             </form>
         </div>
     </div>
+
+    <!-- js -->
+    <script src="/js/main.js" type="module" defer></script>
 </body>
 </html>
